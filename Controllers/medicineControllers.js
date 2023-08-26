@@ -86,7 +86,7 @@ exports.medicine_decrease = async (req,res) => {
           }
         );
           const reminder = new Reminder({
-            id : new mongoose.Types.ObjectId(),
+            _id : new mongoose.Types.ObjectId(),
             compartment: previousData.compartment,
           })
         reminder.save().then((result)=>{
