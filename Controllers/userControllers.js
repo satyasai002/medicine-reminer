@@ -65,10 +65,7 @@ exports.user_login = (req, res) => {
               email: user[0].email,
               id: user[0]._id,
             },
-            "password",
-            {
-              expiresIn: "12h",
-            }
+            "password"
           );
           user[0].password = "";
           return res.status(200).json({
